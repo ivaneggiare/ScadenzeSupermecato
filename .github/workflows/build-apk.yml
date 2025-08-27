@@ -24,7 +24,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build with Gradle
-        run: ./gradlew assembleDebug --stacktrace
+       run: gradle assembleDebug
 
       - name: List build outputs
         run: ls -R app/build/outputs || echo "No outputs found"
