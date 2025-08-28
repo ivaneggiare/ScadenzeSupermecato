@@ -1,2 +1,4 @@
 @echo off
-java -jar gradle\wrapper\gradle-wrapper.jar %*
+set DIR=%~dp0
+set JAVA_EXEC=java
+"%JAVA_EXEC%" -Xmx64m -Xms64m -cp "%DIR%\gradle\wrapper\gradle-wrapper.jar" org.gradle.wrapper.GradleWrapperMain %*
